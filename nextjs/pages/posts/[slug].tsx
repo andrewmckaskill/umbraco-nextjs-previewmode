@@ -69,7 +69,7 @@ export async function getStaticPaths({ preview }: { preview: boolean }) {
   const slugs = await getAllPostSlugs(preview);
 
   return {
-    paths: slugs.map((slug) => `/posts${slug}`),
+    paths: slugs,
     fallback: false,
   };
 }
